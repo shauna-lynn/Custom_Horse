@@ -1,7 +1,7 @@
 
 # Smokey Black Black Star Friesian Horse for RedM
 
-If you were watching my stream – I swear it worked! I must have gotten lucky the first time I played with it. This is the RedM ported version of the [Smokey Black Black Star Friesian horse](https://www.nexusmods.com/reddeadredemption2/mods/2352) from Nexus Mods. Looking back on the VOD, the first attempt did not work as in the `fxmanifest.lua` we had written `files 'metapeds.ymt'` which is incorrect - it should have been `file 'metapeds.ymt'` or ` files { 'metapeds.ymt' }`
+If you were watching my stream – I swear it worked! I must have gotten lucky the first time I played with it. This is the RedM ported version of the [Smokey Black Black Star Friesian horse](https://www.nexusmods.com/reddeadredemption2/mods/2352) from Nexus Mods. Looking back on the VOD, the first attempt did not work as in the `fxmanifest.lua` we had written `files 'metapeds.ymt'` which is incorrect - it should have been `file 'metapeds.ymt'` or ` files { 'metapeds.ymt' }` but for a VERY ROUGH video tutorial on the process you can view my [VOD on Twitch](https://www.twitch.tv/videos/2284448223) - just keep in mind it didn't work because of the fxmanifest. The process remains the same. 
 
 ## Overview
 
