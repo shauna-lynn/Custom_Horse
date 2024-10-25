@@ -1,92 +1,105 @@
-If you were watching my stream - I swear it worked! I must have got lucky the first time I played with it. 
-This is the RedM version of the Smokey Black Black Star Friesian horse from https://www.nexusmods.com/reddeadredemption2/mods/2352
 
-When streaming an edited ymt file based solely on the information provided in https://forum.cfx.re/t/how-to-add-a-new-custom-horse it works to an extent - the reins are missing and the legs are deformed coining the "spaghetti names" nickname.
-However, when I was playing with the files earlier - I noticed if I add the model name into the ymt, then we can name the model whatever we wanted AND it fixes the model deformalities. 
+# Smokey Black Black Star Friesian Horse for RedM
 
-Unfortuantely, to fix the reins I believe we have to add the model to reinsdefinition.ymt which I suspect uses the REINS_DEFINITIONS_FILE data loader for the fxmanifest which is not supported by CFX at the time. 
+If you were watching my stream – I swear it worked! I must have gotten lucky the first time I played with it. This is the RedM ported version of the [Smokey Black Black Star Friesian horse](https://www.nexusmods.com/reddeadredemption2/mods/2352) from Nexus Mods.
 
-Some information that you will find helpful when reviewing this, if you didn't see the stream:
-<explicitAssets itemType="MetaPedDefExplicitAsset">          =          The different components that go on the horse, these consist of: 
-drawable = the model
-albedo = the texture
-normal = the normal texture (the bump map, the texture of the texture)
-material
-palette = the colour palette
-tint 0-2 = the colours from the palette
-probability = i have no clue
+## Overview
 
-What are each drawable?
-teef = horse eyes
-feet = horse hooves (I believe)
-head = horse head
-hands = horse body
-mis2 = horse eyelashes
-mane = horse mane
-hair = horse tail
-feather = horse feathers
-mustache = mustache
+When streaming an edited `.ymt` file based on the information provided in [How to Add a New Custom Horse](https://forum.cfx.re/t/how-to-add-a-new-custom-horse), the horse model works to an extent, but there are issues:
 
-You can add or remove the drawables by adding or removing them from the ymt. 
+- **Missing Reins**: The horse spawns without reins.
+- **Deformed Legs**: Coining the nickname "spaghetti legs."
 
-Known Horse-Related MetaPedExpressions
-Format: ID - What it changes
-I haven't tested the lowest possible for each of these, but the highest without issues should be around 1.0 (lets go with a range of 0.1 to 1.0)
-General Body Structure
-10726 - Horse body size
-3015 - Horse muscles
-8147 - Horse muscle tone / veins
-57577 - Horse belly size
-63348 - Horse belly size (duplicated value)
-41611 - Horse gender (0.0 = male, 1.0 = female)
+Interestingly, I found that adding the model name into the `.ymt` file allows us to name the model whatever we want *and* it resolves the model deformations. However, fixing the reins seems to require adding the model to `reinsdefinition.ymt`, which I suspect uses the `REINS_DEFINITIONS_FILE` data loader in `fxmanifest`. Unfortunately, this feature is not supported by CFX at this time.
 
-Head and Face
-48003 - Horse head size
-43213 - Horse head width
-1589 - Horse under jaw sagging
-62196 - Horse nose bridge depth
-3054 - Horse nose length
-22549 - Horse nose size
-29982 - Horse nose bridge height
-36120 - Horse right nostril size
-35608 - Horse left nostril size
+## MetaPedDefExplicitAsset Breakdown
 
-Ears
-23050 - Horse right ear size
-22538 - Horse left ear size
-19812 - Horse left ear forward/backward
-19813 - Horse left ear X-position
-19780 - Horse right ear forward/backward
-19781 - Horse right ear X-position
+### Components Overview
 
-Eyes
-34850 - Horse right eye size
-17697 - Horse right eye forward/backward
-17698 - Horse right eye height
-34338 - Horse left eye size
-17185 - Horse left eye forward/backward
-17186 - Horse left eye height
+- **Drawable**: The model.
+- **Albedo**: The base texture.
+- **Normal**: The bump map (texture of the texture).
+- **Material**: Defines surface properties.
+- **Palette**: The color palette.
+- **Tint 0-2**: Colors derived from the palette.
+- **Probability**: Currently unknown.
 
-Neck and Throat
-42991 - Horse base of neck height
-26839 - Horse neck thickness
-10002 - Horse neck height
-2075 - Horse throat size
-Shoulders, Chest, and Back
-15833 - Horse shoulder height
-41478 - Horse back width / chest size/width
+### Common Drawable Components
 
-Legs
-8420 - Horse front legs
-16934 - Horse hind legs
-60975 - Horse ankles
-26933 - Horse knee and hock size
+| Drawable | Description            |
+| -------- | ---------------------- |
+| `teef`   | Horse eyes             |
+| `feet`   | Horse hooves (believed)|
+| `head`   | Horse head             |
+| `hands`  | Horse body             |
+| `mis2`   | Horse eyelashes        |
+| `mane`   | Horse mane             |
+| `hair`   | Horse tail             |
+| `feather`| Horse feathers         |
+| `mustache`| Mustache              |
 
-Hooves
-39436 - Horse hooves
-9675 - Horse hooves length
+You can add or remove drawables by editing the `.ymt` file directly.
 
-Rear and Tail
-62347 - Horse butt size
-11904 - Horse rear back height
-54287 - Horse tail angle
+## Known Horse-Related MetaPed Expressions
+
+Below is a list of known MetaPed expressions affecting different horse body parts. The typical value range is from **0.1 to 1.0** for most expressions:
+
+### General Body Structure
+- **10726** - Body size
+- **3015** - Muscle mass
+- **8147** - Muscle tone / veins
+- **57577** - Belly size
+- **63348** - Belly size (duplicate)
+- **41611** - Gender (0.0 = male, 1.0 = female)
+
+### Head and Face
+- **48003** - Head size
+- **43213** - Head width
+- **1589** - Under jaw sagging
+- **62196** - Nose bridge depth
+- **3054** - Nose length
+- **22549** - Nose size
+- **29982** - Nose bridge height
+- **36120** - Right nostril size
+- **35608** - Left nostril size
+
+### Ears
+- **23050** - Right ear size
+- **22538** - Left ear size
+- **19812** - Left ear forward/backward
+- **19813** - Left ear X-position
+- **19780** - Right ear forward/backward
+- **19781** - Right ear X-position
+
+### Eyes
+- **34850** - Right eye size
+- **17697** - Right eye forward/backward
+- **17698** - Right eye height
+- **34338** - Left eye size
+- **17185** - Left eye forward/backward
+- **17186** - Left eye height
+
+### Neck and Throat
+- **42991** - Base of neck height
+- **26839** - Neck thickness
+- **10002** - Neck height
+- **2075** - Throat size
+
+### Shoulders, Chest, and Back
+- **15833** - Shoulder height
+- **41478** - Back width / chest size
+
+### Legs
+- **8420** - Front legs
+- **16934** - Hind legs
+- **60975** - Ankles
+- **26933** - Knee and hock size
+
+### Hooves
+- **39436** - Hoof size
+- **9675** - Hoof length
+
+### Rear and Tail
+- **62347** - Butt size
+- **11904** - Rear back height
+- **54287** - Tail angle
