@@ -1,6 +1,8 @@
 
 # Smokey Black Black Star Friesian Horse for RedM
 
+** NOTE 10/25/2024 - It has been brought to my attention that the reason the spaghetti legs are gone is because I used CodeX to save the file as a binary - not because of the name in the file. I did not realise at the time that I was doing a step that wasn't initially explained! I am unsure if adding the name to the file itself has any sort of benefit or if it's just something silly that doesn't need to be there. **
+
 If you were watching my stream – I swear it worked! I must have gotten lucky the first time I played with it. This is the RedM ported version of the [Smokey Black Black Star Friesian horse](https://www.nexusmods.com/reddeadredemption2/mods/2352) from Nexus Mods. Looking back on the VOD, the first attempt did not work as in the `fxmanifest.lua` we had written `files 'metapeds.ymt'` which is incorrect - it should have been `file 'metapeds.ymt'` or ```files { 'metapeds.ymt' }``` but for a VERY ROUGH video tutorial on the process you can view my [VOD on Twitch](https://www.twitch.tv/videos/2284448223) - just keep in mind it didn't work because of the fxmanifest. The process remains the same. I am positive the native skins did not work because of the naming conventions of the textures.
 
 ## Overview
