@@ -42,7 +42,7 @@ You can add or remove drawables by editing the `.ymt` file directly.
 
 ## Known Horse-Related MetaPed Expressions
 
-Below is a list of known MetaPed expressions affecting different horse body parts. The typical value range is from **0.1 to 1.0** for most expressions:
+Below is a list of known MetaPed expressions affecting different horse body parts compiled by [information provided by T3CHMAN](https://pastebin.com/Ld76cAn7). The typical value range is from **0.1 to 1.0** for most expressions:
 
 ### General Body Structure
 - **10726** - Body size
