@@ -1,9 +1,10 @@
 ## Method 1: Scripts - Body & Coat
 If you have an idea of how to script, then you should know how to use the natives below.
-A high overview 
+A high-level overview is as follows:
 1. Spawn a base horse model.
 2. Use **character expressions** to modify the physical appearance of the body.
 3. Use **metaped tags** to adjust horse coat textures and colours.
+4. Refresh the ped once you make the changes you like
 
 | Context | Native                                     | Params                                                                                                                                                       | Description                                                                                                                                                     |
 | ------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -13,6 +14,7 @@ A high overview
 | Client  | RemoveTagFromMetaPed<br>0xD710A5007C2AC539 | `ped`<br>`component` (hash)<br>`?` (int)                                                                                                                     | Removes the specified metaped component.<br><br>? param is unknown                                                                                              |
 ## Method 2: YMT Files - Body & Coat
 #### 1. Editing existing YMTs
+
 #### 2. Creating custom YMTs
 I do not believe this is really worth going over at its current state. At least not until CFX updates and allows for streaming of additional file types. I have been waiting very patiently for [this pr](https://github.com/citizenfx/fivem/pull/3376) to be merged, as I suspect it will make more possible, from addon ymts to textures and more. Though, I am not 100% but one can dream.
 
