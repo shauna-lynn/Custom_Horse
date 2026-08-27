@@ -18,7 +18,7 @@ A high-level overview is as follows:
 #### 2. Creating custom YMTs
 I do not believe this is really worth going over at its current state. At least not until CFX updates and allows for streaming of additional file types. I have been waiting very patiently for [this pr](https://github.com/citizenfx/fivem/pull/3376) to be merged, as I suspect it will make more possible, from addon ymts to textures and more. Though, I am not 100% but one can dream.
 
-Regardless, you can take a look at [the old files](Resources/OLD - Custom_Horse Repo/README) for more information on that one. This method has its own issues, from no reins to "spaghetti legs". This method can also be reviewed in the [creating custom horses forum thread](https://forum.cfx.re/t/how-to-add-a-new-custom-horse/5185418)
+Regardless, you can take a look at [the old files](Resources/OLD - Custom_Horse Repo/README.md) for more information on that one. This method has its own issues, from no reins to "spaghetti legs". This method can also be reviewed in the [creating custom horses forum thread](https://forum.cfx.re/t/how-to-add-a-new-custom-horse/5185418)
 ## My Method
 The way I create custom horses and the way I would recommend you do it, mixes both of the above methods together into its own resource
 - Use YMT files and utilize **outfits** to create new body appearances
