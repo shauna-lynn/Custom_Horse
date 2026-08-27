@@ -4,5 +4,7 @@ I do not consider myself an advanced developer by any means and I do use AI to a
 ### Tools & Resources
 I highly recommend [DexyFex's CodeX](https://www.patreon.com/dexyfex/join) for exploring and editing game files. Download links are in their Discord server once you get Patreon roles. At the time of writing, v30 is the most recent version but I've had more luck with v29 for most things I work with. I use this program for SO MUCH! From searching horse related files to creating game maps or creation of custom objects... it is so handy!
 ### Resources
-- [Old Example](Custom_Horse/Resources/Old Example) - The original repo files dating back a few years. The first initial experiments and findings.
+- [Old Example](Custom_Horse/Resources/OLD - Custom_Horse Repo) - The original repo files dating back a few years. The first initial experiments and findings.
 - [RDR2 Strings](Custom_Horse/Resources/Codex.Games.RDR2.strings.txt) - A file of strings for use in CodeX. It compiles strings from CodeX itself as well as other sources found online (OpenIV, etc.) merged into a single file for use. It does not look pretty. It is not sorted nice like CodeX files or otherwise. However, it does what it needs to do and exposes a fair number of horse-related strings.
+
+The notes within this repo will be refined over time. 
