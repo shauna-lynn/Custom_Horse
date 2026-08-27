@@ -26,4 +26,5 @@ The way I create custom horses and the way I would recommend you do it, mixes bo
 
 I edit the following YMT files, personally: 
 - `a_c_horse_winter02_01.ymt` - Is a horse that is not normally used, so easy to edit and not mess up other scripts. I am confident that you can delete all existing outfits in this one and start fresh.
-- `a_c_horsemulepainted_01.ymt` - I only use this for horses that I want to bray [bray](https://www.youtube.com/watch?v=cJg2x2g0T9o)
+- `a_c_horsemulepainted_01.ymt` - I only use this for horses that I want to bray [![Braying](https://img.youtube.com/vi/cJg2x2g0T9o/0.jpg)](https://www.youtube.com/watch?v=cJg2x2g0T9o)
+
