@@ -1,4 +1,9 @@
 ## Method 1: Scripts - Body & Coat
+If you have an idea of how to script, then you should know how to use the natives below.
+A high overview 
+1. Spawn a base horse model.
+2. Use **character expressions** to modify the physical appearance of the body.
+3. Use **metaped tags** to adjust horse coat textures and colours.
 
 | Context | Native                                     | Params                                                                                                                                                       | Description                                                                                                                                                     |
 | ------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
