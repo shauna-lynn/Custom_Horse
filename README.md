@@ -1,6 +1,9 @@
 In summary, I intend for this repo to be a collection of my research into creating custom horses and horse systems. Somewhere along the line, I may sneak in some assets for you to use once I am comfortable with sharing them!
 
 I do not consider myself an advanced developer by any means and I do use AI to assist me in my research and learning. What I share here is what I've come to understand of the systems and how they work for me within my own scripts I've developed over the last few years. 
+
+It is possible the format and structure of this repo will change frequently, as well as the information within it as I discover more! :) 
+
 ## Scope & Prerequisites
 - Some knowledge of scripting RedM in LUA. I will provide natives and how to use them as well as some code snippets for use. I will not be providing full scripts.
 - Some knowledge of game files, how they work and navigation of them would be beneficial. A lot of this work is done by viewing and/or modifying these files.
