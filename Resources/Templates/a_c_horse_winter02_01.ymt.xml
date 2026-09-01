@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaPed>
+ <outfits itemType="MetaPedOutfit">
+  <Item>
+   <name />
+   <ethnicity>caucasian</ethnicity>
+   <slodDwd />
+   <voiceGroup />
+   <damagePack />
+   <goreType />
+   <scale value="1" />
+   <cutsceneScale value="1" />
+   <scaleRandomOffset value="0" />
+   <coatShine value="1" />
+   <coatShineBase value="0" />
+   <coatShineMin value="0" />
+   <coatShineMax value="0.2" />
+   <eyeRedness value="0" />
+   <removeLimbBone>ID_INVALID</removeLimbBone>
+   <fullOutfit value="True" />
+   <priorityLoad value="True" />
+   <preStream value="True" />
+   <assets />
+   <explicitAssets itemType="MetaPedDefExplicitAsset">
+   <Item>
+     <drawable>p_c_horse_01_head_000</drawable>
+     <albedo>p_c_horse_01_head_000_c0_897_ab</albedo>
+     <normal>p_c_horse_01_head_000_c0_000_nm</normal>
+     <material>p_c_horse_01_head_000_c0_000_m</material>
+     <palette>metaped_tint_horse</palette>
+     <tint0 value="63" />
+     <tint1 value="2" />
+     <tint2 value="195" />
+     <probability value="255" />
+    </Item>
+    <Item>
+     <drawable>p_c_horse_01_hand_000</drawable>
+     <albedo>p_c_horse_01_hand_000_c0_897_ab</albedo>
+     <normal>p_c_horse_01_hand_000_c0_000_nm</normal>
+     <material>p_c_horse_01_hand_000_c0_000_m</material>
+     <palette>metaped_tint_horse</palette>
+     <tint0 value="63" />
+     <tint1 value="56" />
+     <tint2 value="171" />
+     <probability value="255" />
+    </Item>
+    <Item>
+     <drawable>p_c_horse_01_teef_000</drawable>
+     <albedo>p_c_horse_01_teef_000_c0_000_ab</albedo>
+     <normal>p_c_horse_01_teef_000_c0_000_nm</normal>
+     <material>p_c_horse_01_teef_000_c0_000_m</material>
+     <palette />
+     <tint0 value="0" />
+     <tint1 value="0" />
+     <tint2 value="0" />
+     <probability value="255" />
+    </Item>
+    <Item>
+     <drawable>p_c_horse_01_mis2_000</drawable>
+     <albedo>p_c_horse_01_mis2_000_c0_000_ab</albedo>
+     <normal>p_c_horse_01_mis2_000_c0_000_nm</normal>
+     <material>p_c_horse_01_mis2_000_c0_000_m</material>
+     <palette>metaped_tint_horse</palette>
+     <tint0 value="62" />
+     <tint1 value="62" />
+     <tint2 value="62" />
+     <probability value="255" />
+    </Item>
+    <Item>
+     <drawable>p_c_horse_01_tas2_000</drawable>
+     <albedo>p_c_horse_01_tas2_000_c0_000_ab</albedo>
+     <normal>p_c_horse_01_tas2_000_c0_000_nm</normal>
+     <material>p_c_horse_01_tas2_000_c0_000_m</material>
+     <palette />
+     <tint0 value="0" />
+     <tint1 value="0" />
+     <tint2 value="0" />
+     <probability value="255" />
+    </Item>
+   </explicitAssets>
+   <expressions itemType="MetaPedExpression">
+   </expressions>
+   <subOutfits />
+   <variations />
+   <tags />
+   <shopItems />
+  </Item>
+ </outfits>
+ <voiceGroup />
+ <pulverizeVfx />
+ <goreType>default_horse</goreType>
+ <type>MPT_ANIMAL</type>
+ <version value="27" />
+ <allowRandomExpressions value="False" />
+</MetaPed>
