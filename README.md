@@ -14,6 +14,12 @@ It is possible the format and structure of this repo will change frequently, as 
 - [DexyFex's CodeX](https://www.patreon.com/dexyfex/join) for exploring and editing game files. Download links are in their Discord server once you get Patreon roles. At the time of writing, v30 is the most recent version but I've had more luck with v29 for most things I work with. I use this program for SO MUCH! From searching horse related files to creating game maps or creation of custom objects... it is so handy! [RDR2 Strings](Resources/Codex.Games.RDR2.strings.txt) is a file of strings for use in CodeX. It compiles strings from CodeX itself as well as other sources found online (OpenIV, etc.) merged into a single file for use. It does not look pretty. It is not sorted nice like CodeX files or otherwise. However, it does what it needs to do and exposes a fair number of horse-related strings.
 - As a free alternative, [OpenIV](https://www.rdr2mods.com/downloads/rdr2/tools/45-openiv/) may work. I have not and would not use it myself, so I am not going to give guidance to that one.
 - Lists of character expressions, used throughout the different methods defined below: [List by DISQUSE](https://pastebin.com/9jb88FXW) or [List by T3CHMAN](https://pastebin.com/Ld76cAn7) additionally, my own compiled list of horse-related ones.
+
+## Guides
+
+- [YMT Method](Docs/YMT%20Method.md): outfits, explicit assets and horse expressions.
+- [Add On Method](Docs/Add%20On%20Method.md): custom assets **without** replacing existing ones. **Highly desired, but with big drawback**
+
 ## Methods to Create Horses
 ### Method 1: Scripting
 Two natives stand out when we want to create horses via script: 

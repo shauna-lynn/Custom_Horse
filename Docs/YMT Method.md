@@ -39,7 +39,9 @@ Each option is explained below. Add each horse as a new `<Item>` under `<outfits
 | `version`                  | Internal MetaPed version/identifier. It is not the outfit number or outfit count.                                                                                                                 |
 | `allowRandomExpressions`   | Allows the engine to introduce randomized MetaPed expression values. Use `False` when each breed should retain the exact body shape defined under `expressions`.                                  |
 ## Explicit Assets
-Explicit assets, referred to as "components" within my script and related documents, make up the horse. If a component is defined in the ymt, it will appear in-game when the horse is spawned. This is also where you can define textures and tints.
+An `explicitAssets` recipe selects registered assets; adding a name here does not itself register a new streamed asset. That guide explains asset preparation, client registry merging, streaming, texture compatibility and applying the complete appearance.
+
+Explicit assets, referred to as "components" within my script and related documents, make up the horse. A recipe in the selected YMT outfit tells the game which registered drawable and textures to apply when the horse is spawned. The referenced assets must also be available to the client. This is also where you can define textures and tints.
 
 Horse bodies usually consist of the following components, modified to your tastes.
 Note that the components listed below have a bunch of varieties, be it drawables or albedos. 
