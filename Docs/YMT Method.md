@@ -68,135 +68,165 @@ An expression `id` identifies a deformation channel used by the horse's expressi
 
 Observed YMT files themselves contain values outside `-1.0` to `1.0`.
 
-The descriptions below are working names compiled from [T3CHMAN's MetaPed expression list](https://pastebin.com/Ld76cAn7) and compared against the expression IDs present in the exported stock horse YMT files. They are not official descriptions. Entries that still have no reliable identification are marked **Unknown** rather than guessed.
-#### Horse morphs
-The below expressions have been observed in horse files.
+### Names and verification
 
-|      ID | Working description                                  |
-| ------: | ---------------------------------------------------- |
-| `10726` | Overall horse body size                              |
-|  `3015` | Muscle size                                          |
-| `18278` | Belly size or vertical position                      |
-| `60649` | Belly horizontal position                            |
-| `42991` | Height of the base of the neck                       |
-| `26839` | Neck thickness                                       |
-| `15833` | Shoulder height                                      |
-| `41478` | Back or chest width                                  |
-| `62347` | Hindquarter or butt size                             |
-| `11904` | Rear-back or croup height                            |
-| `36550` | Thigh size                                           |
-|  `8420` | Front-leg size                                       |
-| `16934` | Hind-leg size                                        |
-| `60975` | Ankle or fetlock size                                |
-| `39436` | Hoof size                                            |
-| `48003` | Overall head size                                    |
-|  `1589` | Under-jaw sag or depth                               |
-| `62196` | Nose-bridge depth                                    |
-|  `3054` | Muzzle or nose length                                |
-| `55026` | Forehead height                                      |
-| `23050` | Right-ear size                                       |
-| `22538` | Left-ear size                                        |
-| `22549` | Muzzle or nose size                                  |
-| `29982` | Nose-bridge height                                   |
-| `36120` | Right-nostril size                                   |
-| `35608` | Left-nostril size                                    |
-| `43213` | Horse head width                                     |
-|  `2075` | Throat or jowl size                                  |
-| `34850` | Right-eye size                                       |
-| `17697` | Right-eye forward or backward position               |
-| `17698` | Right-eye height                                     |
-| `34338` | Left-eye size                                        |
-| `17185` | Left-eye forward or backward position                |
-| `17186` | Left-eye height                                      |
-|  `9675` | Hoof length                                          |
-| `33485` | Anterior trapezius or front neck-and-shoulder muscle |
-|  `8147` | Muscle tone or vein definition                       |
-| `57577` | Belly size                                           |
-| `10002` | Neck height                                          |
-| `63348` | Belly size; a separate region from `57577`           |
-| `19812` | Left ear forward or backward position                |
-| `19813` | Left ear horizontal position                         |
-| `19780` | Right ear forward or backward position               |
-| `19781` | Right ear horizontal position                        |
-| `54287` | Tail angle                                           |
-| `26933` | Knee and hock size                                   |
-| `46240` | Chest height; described as female-only               |
-|  `8991` | Butt or hip size; described as female-only           |
-| `41611` | Horse gender morph: `0.0` male, `1.0` female         |
-| `52553` | **Unknown**                                          |
-|  `3437` | **Unknown**                                          |
-|  `9584` | **Unknown**                                          |
-| `16009` | **Unknown**                                          |
-| `38169` | **Unknown**                                          |
-|  `9586` | **Unknown**                                          |
-| `43894` | **Unknown**                                          |
-| `55710` | **Unknown**                                          |
-| `55711` | **Unknown**                                          |
+The descriptions below are readable **working labels**, originally compiled from [T3CHMAN's MetaPed expression list](https://pastebin.com/Ld76cAn7). They are not verified original Rockstar names for the individual numeric controls. Preserve the numeric ID when discussing or testing a morph; unresolved descriptions remain **Unknown**.
+
+The proper asset names verified in both exported dictionaries include `pack:/p_c_horse01_customization.expr`, `pack:/p_c_horse01.expr`, `pack:/p_c_horse01_lod1.expr`, `pack:/p_c_horse01_lod2.expr`, `pack:/p_c_horsefat.expr` and `pack:/rigfatxml_horse.expr`. These name expression programs, not individual sliders. A program can read several inputs and affect several bones.
+
+The runtime setter is `_SET_CHAR_EXPRESSION` (`0x5653AB26C82938CF`); the getter is `_GET_CHAR_EXPRESSION` (`0xFD1BA1EEF7985BB8`). Older references call them `_SET_PED_FACE_FEATURE` and `_GET_PED_FACE_FEATURE`; see the [RDR3 native database](https://github.com/alloc8or/rdr3-nativedb-data/blob/master/natives.json). The expression ID is not an index into the skeleton. For exact skeletal names and IDs, use [Verified horse bones](Horse%20Bones.md).
+
+The table now distinguishes two checks, repeated on 2026-09-20:
+
+- **YMT**: the ID occurs in an outfit's `expressions/Item/id` in the current 242-file horse/mule MetaPed export collection (147 distinct basenames across archive versions).
+- **YED read**: an instruction whose type starts with `TrackGet` reads that ID on track `64` in **both** inspected horse dictionaries. This checks direct reads only; it does not establish the complete dependency graph, visible effect, value direction or multiplayer synchronization.
+
+**Not found** means absent from this specific check, not proven unsupported. A shared facial label or a stored YMT value alone does not prove a visible horse morph. This is source verification; no new in-game or two-client tests were performed for this documentation update.
+
+#### Horse morphs
+Horse-oriented working labels and unresolved controls; use the evidence columns to distinguish observed entries from candidates.
+
+| ID | Working description | YMT | YED read |
+| ---: | --- | --- | --- |
+| `10726` | Overall horse body size                              | Present | Read |
+|  `3015` | Muscle size                                          | Present | Read |
+| `18278` | Belly size or vertical position                      | Present | Read |
+| `60649` | Belly horizontal position                            | Present | Read |
+| `42991` | Height of the base of the neck                       | Present | Read |
+| `26839` | Neck thickness                                       | Present | Read |
+| `15833` | Shoulder height                                      | Present | Read |
+| `41478` | Back or chest width                                  | Present | Read |
+| `62347` | Hindquarter or butt size                             | Present | Read |
+| `11904` | Rear-back or croup height                            | Present | Read |
+| `36550` | Thigh size                                           | Present | Read |
+|  `8420` | Front-leg size                                       | Present | Read |
+| `16934` | Hind-leg size                                        | Present | Read |
+| `60975` | Ankle or fetlock size                                | Present | Read |
+| `39436` | Hoof size                                            | Present | Read |
+| `48003` | Overall head size                                    | Present | Read |
+|  `1589` | Under-jaw sag or depth                               | Present | Read |
+| `62196` | Nose-bridge depth                                    | Present | Read |
+|  `3054` | Muzzle or nose length                                | Present | Read |
+| `55026` | Forehead height                                      | Present | Read |
+| `23050` | Right-ear size                                       | Present | Read |
+| `22538` | Left-ear size                                        | Present | Read |
+| `22549` | Muzzle or nose size                                  | Present | Read |
+| `29982` | Nose-bridge height                                   | Present | Read |
+| `36120` | Right-nostril size                                   | Present | Read |
+| `35608` | Left-nostril size                                    | Present | Read |
+| `43213` | Horse head width                                     | Present | Read |
+|  `2075` | Throat or jowl size                                  | Present | Read |
+| `34850` | Right-eye size                                       | Present | Read |
+| `17697` | Right-eye forward or backward position               | Present | Read |
+| `17698` | Right-eye height                                     | Present | Read |
+| `34338` | Left-eye size                                        | Present | Read |
+| `17185` | Left-eye forward or backward position                | Present | Read |
+| `17186` | Left-eye height                                      | Present | Read |
+|  `9675` | Hoof length                                          | Present | Read |
+| `33485` | Anterior trapezius or front neck-and-shoulder muscle | Present | Not found |
+|  `8147` | Muscle tone or vein definition                       | Present | Read |
+| `57577` | Belly size                                           | Present | Read |
+| `10002` | Neck height                                          | Present | Read |
+| `63348` | Belly size; a separate region from `57577`           | Present | Read |
+| `19812` | Left ear forward or backward position                | Present | Read |
+| `19813` | Left ear horizontal position                         | Present | Read |
+| `19780` | Right ear forward or backward position               | Present | Read |
+| `19781` | Right ear horizontal position                        | Present | Read |
+| `54287` | Tail angle                                           | Present | Read |
+| `26933` | Knee and hock size                                   | Present | Read |
+| `46240` | Chest height; described as female-only               | Not found | Not found |
+|  `8991` | Butt or hip size; described as female-only           | Not found | Not found |
+| `41611` | Horse gender morph: `0.0` male, `1.0` female         | Not found | Read |
+| `52553` | **Unknown**                                          | Present | Not found |
+|  `3437` | **Unknown**                                          | Present | Not found |
+|  `9584` | **Unknown**                                          | Present | Not found |
+| `16009` | **Unknown**                                          | Present | Not found |
+| `38169` | **Unknown**                                          | Present | Not found |
+|  `9586` | **Unknown**                                          | Present | Not found |
+| `43894` | **Unknown**                                          | Present | Not found |
+| `55710` | **Unknown**                                          | Not found | Not found |
+| `55711` | **Unknown**                                          | Not found | Not found |
 #### Shared body and facial morphs
 These channels are part of the broader MetaPed expression system and are also used by human peds. Observed horse YMTs commonly include them, although some produce little or no visible change on particular horse components.
 
-| ID | Working description |
-| ---: | --- |
-| `18046` | Shoulder-blade or back-muscle definition |
-| `46032` | Limb size; called arm size on human peds |
-| `27779` | Chest shape or size |
-| `50460` | Waist width |
-| `49787` | Hip width or stomach size |
-| `64834` | Thigh size |
-| `42067` | Calf or lower-leg size |
-| `50039` | Shoulder size |
-| `7010` | Shoulder thickness |
-| `34006` | Head width |
-| `41396` | Face width |
-| `13059` | Brow height |
-| `12281` | Brow width |
-| `19153` | Brow depth |
-| `49231` | Ear depth |
-| `46798` | Ear angle |
-| `10308` | Ear height |
-| `60720` | Earlobe or ear-base shape |
-| `27147` | Cheekbone height |
-| `43983` | Cheekbone width |
-| `13709` | Cheekbone depth |
-| `36106` | Jaw height |
-| `60334` | Jaw width |
-| `7670` | Jaw depth |
-| `15375` | Chin height |
-| `50098` | Chin width |
-| `58147` | Chin depth |
-| `35627` | Eyelid height |
-| `7019` | Eyelid width |
-| `60996` | Eye depth |
-| `53862` | Eye angle |
-| `42318` | Distance between the eyes |
-| `56827` | Eye height |
-| `28287` | Nose width |
-| `13425` | Overall nose size |
-| `1013` | Nose height |
-| `13489` | Nose angle |
-| `61782` | Nose curvature |
-| `22046` | Distance between the nostrils |
-| `61541` | Mouth width |
-| `43625` | Mouth depth |
-| `31427` | Mouth horizontal position |
-| `16653` | Mouth vertical position |
-| `6656` | Upper-lip height |
-| `37313` | Upper-lip width |
-| `50037` | Upper-lip depth |
-| `47949` | Lower-lip height |
-| `45232` | Lower-lip width |
-| `23830` | Lower-lip depth |
-| `55182` | Jaw vertical position |
-| `57350` | Left mouth-corner width |
-| `40950` | Left mouth-corner depth |
-| `46661` | Left mouth-corner height |
-| `22344` | Left mouth-corner lip separation |
-| `60292` | Right mouth-corner width |
-| `49299` | Right mouth-corner depth |
-| `55718` | Right mouth-corner height |
-| `9423` | Right mouth-corner lip separation |
-| `22421` | Right eyelid opening or closing |
-| `52902` | Left eyelid opening or closing |
-| `36277` | Neck width |
-| `60890` | Neck depth |
-Of these 120 known IDs, 117 appear somewhere in the exported horse YMT files examined. `46240`, `8991`, and `41611` do not appear in those observed YMT expressions.
+| ID | Working description | YMT | YED read |
+| ---: | --- | --- | --- |
+| `18046` | Shoulder-blade or back-muscle definition | Not found | Not found |
+| `46032` | Limb size; called arm size on human peds | Present | Not found |
+| `27779` | Chest shape or size | Present | Not found |
+| `50460` | Waist width | Present | Not found |
+| `49787` | Hip width or stomach size | Present | Not found |
+| `64834` | Thigh size | Present | Not found |
+| `42067` | Calf or lower-leg size | Present | Not found |
+| `50039` | Shoulder size | Present | Not found |
+| `7010` | Shoulder thickness | Present | Not found |
+| `34006` | Head width | Present | Not found |
+| `41396` | Face width | Present | Not found |
+| `13059` | Brow height | Present | Not found |
+| `12281` | Brow width | Present | Not found |
+| `19153` | Brow depth | Present | Not found |
+| `49231` | Ear depth | Present | Not found |
+| `46798` | Ear angle | Present | Not found |
+| `10308` | Ear height | Present | Not found |
+| `60720` | Earlobe or ear-base shape | Present | Not found |
+| `27147` | Cheekbone height | Present | Not found |
+| `43983` | Cheekbone width | Present | Not found |
+| `13709` | Cheekbone depth | Present | Not found |
+| `36106` | Jaw height | Present | Not found |
+| `60334` | Jaw width | Present | Not found |
+| `7670` | Jaw depth | Present | Not found |
+| `15375` | Chin height | Present | Not found |
+| `50098` | Chin width | Present | Not found |
+| `58147` | Chin depth | Present | Not found |
+| `35627` | Eyelid height | Present | Not found |
+| `7019` | Eyelid width | Present | Not found |
+| `60996` | Eye depth | Present | Not found |
+| `53862` | Eye angle | Present | Not found |
+| `42318` | Distance between the eyes | Present | Not found |
+| `56827` | Eye height | Present | Not found |
+| `28287` | Nose width | Present | Not found |
+| `13425` | Overall nose size | Present | Not found |
+| `1013` | Nose height | Present | Not found |
+| `13489` | Nose angle | Present | Not found |
+| `61782` | Nose curvature | Present | Not found |
+| `22046` | Distance between the nostrils | Present | Not found |
+| `61541` | Mouth width | Present | Not found |
+| `43625` | Mouth depth | Present | Not found |
+| `31427` | Mouth horizontal position | Present | Not found |
+| `16653` | Mouth vertical position | Present | Not found |
+| `6656` | Upper-lip height | Present | Not found |
+| `37313` | Upper-lip width | Present | Not found |
+| `50037` | Upper-lip depth | Present | Not found |
+| `47949` | Lower-lip height | Present | Not found |
+| `45232` | Lower-lip width | Present | Not found |
+| `23830` | Lower-lip depth | Present | Not found |
+| `55182` | Jaw vertical position | Present | Not found |
+| `57350` | Left mouth-corner width | Present | Not found |
+| `40950` | Left mouth-corner depth | Present | Not found |
+| `46661` | Left mouth-corner height | Present | Not found |
+| `22344` | Left mouth-corner lip separation | Present | Not found |
+| `60292` | Right mouth-corner width | Present | Not found |
+| `49299` | Right mouth-corner depth | Present | Not found |
+| `55718` | Right mouth-corner height | Present | Not found |
+| `9423` | Right mouth-corner lip separation | Present | Not found |
+| `22421` | Right eyelid opening or closing | Present | Not found |
+| `52902` | Left eyelid opening or closing | Present | Not found |
+| `36277` | Neck width | Present | Not found |
+| `60890` | Neck depth | Present | Not found |
+### Evidence summary and limits
+
+The current export collection contains **114 of the 120 listed IDs**. `8991`, `18046`, `41611`, `46240`, `55710` and `55711` were not found in this collection's outfit expression entries. The earlier 117-ID count came from a different export collection; it should not be treated as a universal count.
+
+**46 of the listed IDs are directly read by both horse YED dictionaries.** In particular, `41611` is read even though it is absent from the inspected outfit entries. Conversely, `46240` and `8991` are absent from both checks, so their inherited female-only descriptions remain unverified candidates. The nine **Unknown** IDs remain unidentified; their presence in a file does not supply a reliable name or visible effect.
+
+The current YMT snapshot contains values from `-2.0001` to `2.0`. These are observed values, not universal safe limits. A YMT value range is separate from the observed synchronization limits of runtime expression changes.
+
+Inspected sources:
+
+- Horse/mule `.ymt.pso.xml` exports under `CodeX Exports/horse meta/RDR2`; repeated archive versions are retained, and IDs are counted uniquely.
+- `p_c_horse01.yed.xml` and `p_c_horse01.version2.yed.xml`: direct instruction reads, not every `BoneId` occurrence in the file. The latter filename is a local export label and does not establish its game build or archive precedence.
+
+| Dictionary export | SHA-256 of inspected XML |
+| --- | --- |
+| `p_c_horse01.yed.xml` | `692e40452d65bfd472185610c640c1e702bef9c7539099f9223fc364ca326d6c` |
+| `p_c_horse01.version2.yed.xml` | `47a66cd552af3f6d687770f5a80aad3d357b9eeaab9de87143025b2bec45c8ee` |
