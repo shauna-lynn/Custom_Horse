@@ -18,7 +18,7 @@ It is possible the format and structure of this repo will change frequently, as 
 ## Guides
 
 - [YMT Method](Docs/YMT%20Method.md): outfits, explicit assets and horse expressions.
-- [Add On Method](Docs/Add%20On%20Method.md): custom assets **without** replacing existing ones. **Highly desired, but with big drawback**
+- [Add On Method](Docs/Add%20On%20Method.md): server-streamed custom drawables and textures without replacing stock assets; registry refresh is required on every client.
 
 ## Methods to Create Horses
 ### Method 1: Scripting
