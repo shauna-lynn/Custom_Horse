@@ -18,6 +18,7 @@ It is possible the format and structure of this repo will change frequently, as 
 ## Guides
 
 - [YMT Method](Docs/YMT%20Method.md): outfits, explicit assets and horse expressions.
+- [YED expressions](Docs/YED%20Expressions.md): verified jump-offset fixes, custom ear inputs, mount testing and synchronization limits.
 - [Verified horse bones](Docs/Horse%20Bones.md): 671 exact bone names and IDs from the inspected base and facial skeletons, with source indices and parent relationships.
 - [Add On Method](Docs/Add%20On%20Method.md): server-streamed custom drawables and textures without replacing stock assets; registry refresh is required on every client.
 
